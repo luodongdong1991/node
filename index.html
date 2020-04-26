@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>回调</title>
+</head>
+<body>
+    <script>
+       function func1(a){
+            console.log(a);
+        }
+        function func2(option,callback){
+            let kk = 20;
+            callback(kk);
+        }
+        func2(10,func1)
+        try{
+            //这里代码出现错误则执行下面的东西
+            func2(10,func)    
+        }catch{
+            console.log('s')            
+        }
+    </script>
+</body>
+</html>
