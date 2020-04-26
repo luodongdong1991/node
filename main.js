@@ -1,16 +1,8 @@
-var http = require('http');
-var express =require('express');
+var hello = require('./hello');
+//hello = new Hello();
+hello.age()
 
-http.createServer(function (request, response) {
-
-    // 发送 HTTP 头部 
-    // HTTP 状态值: 200 : OK
-    // 内容类型: text/plain
-    response.writeHead(200, {'Content-Type': 'text/plain'});
-
-    // 发送响应数据 "Hello World"
-    response.end('Hello World\n');
-}).listen(8888);
-
-// 终端打印如下信息
-console.log('Server running at http://127.0.0.1:8888/');
+let Fuc  = require('./fuc');
+fuc = new Fuc();
+fuc.setName('luosi');
+fuc.sayHello()
